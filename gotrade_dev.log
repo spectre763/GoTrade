@@ -1,0 +1,144 @@
+
+> gotrade-temp@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.30:3000
+- Environments: .env.local
+✓ Ready in 161ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/tirthsodha/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/tirthsodha/Desktop/GoTrade/package-lock.json
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+ HEAD / 200 in 1800ms (next.js: 1621ms, proxy.ts: 38ms, application-code: 141ms)
+ GET / 200 in 51ms (next.js: 2ms, proxy.ts: 4ms, application-code: 45ms)
+ GET /register 200 in 363ms (next.js: 344ms, proxy.ts: 6ms, application-code: 13ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] TypeError: Failed to fetch
+    at async handleSubmit (app/register/page.tsx:30:25)
+  28 |     setLoading(true);
+  29 |     try {
+> 30 |       const { error } = await supabase.auth.signUp({
+     |                         ^
+  31 |         email: form.email,
+  32 |         password: form.password,
+  33 |         options: { (app/register/page.tsx:30:25)
+ GET /login 200 in 298ms (next.js: 240ms, proxy.ts: 3ms, application-code: 54ms)
+[browser] TypeError: Failed to fetch
+    at handleSubmit (app/login/page.tsx:24:45)
+  22 |     setLoading(true);
+  23 |     try {
+> 24 |       const { error } = await supabase.auth.signInWithPassword({ email, password });
+     |                                             ^
+  25 |       if (error) throw error;
+  26 |       router.push("/dashboard");
+  27 |       router.refresh(); (app/login/page.tsx:24:25)
+ GET /login 200 in 38ms (next.js: 3ms, proxy.ts: 5ms, application-code: 30ms)
+ GET /login 200 in 38ms (next.js: 3ms, proxy.ts: 3ms, application-code: 32ms)
+ GET /login 200 in 38ms (next.js: 2ms, proxy.ts: 3ms, application-code: 32ms)
+✓ Compiled in 31ms
+ GET /login 200 in 83ms (next.js: 28ms, proxy.ts: 27ms, application-code: 28ms)
+✓ Compiled in 40ms
+ GET /login 200 in 67ms (next.js: 24ms, proxy.ts: 9ms, application-code: 35ms)
+ GET /login 200 in 14ms (next.js: 1438µs, proxy.ts: 1138µs, application-code: 12ms)
+ GET /login 200 in 60ms (next.js: 20ms, proxy.ts: 8ms, application-code: 33ms)
+ GET /login 200 in 8ms (next.js: 880µs, proxy.ts: 1550µs, application-code: 6ms)
+ HEAD /dashboard 200 in 433ms (next.js: 264ms, proxy.ts: 1878µs, application-code: 168ms)
+ GET / 200 in 106ms (next.js: 11ms, proxy.ts: 3ms, application-code: 92ms)
+ GET /register 200 in 42ms (next.js: 18ms, proxy.ts: 5ms, application-code: 19ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /dashboard 200 in 42ms (next.js: 3ms, proxy.ts: 4ms, application-code: 35ms)
+ GET /trade 200 in 196ms (next.js: 181ms, proxy.ts: 4ms, application-code: 11ms)
+ GET /api/market/search?q= 200 in 107ms (next.js: 100ms, proxy.ts: 1936µs, application-code: 5ms)
+ GET /api/market/search?q= 200 in 3ms (next.js: 580µs, proxy.ts: 984µs, application-code: 1158µs)
+[browser] Encountered two children with the same key, `NSE_EQ|INE040A01034`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `NSE_EQ|INE040A01034`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+ GET /trade/RELIANCE 200 in 512ms (next.js: 495ms, proxy.ts: 4ms, application-code: 14ms)
+[browser] Uncaught TypeError: chart.addCandlestickSeries is not a function
+    at PriceChartInner.useEffect (components/trading/PriceChart.tsx:83:26)
+    at TradeStockPage (app/(platform)/trade/[symbol]/page.tsx:122:11)
+  81 |     });
+  82 |
+> 83 |     const series = chart.addCandlestickSeries({
+     |                          ^
+  84 |       upColor: "#10b981",
+  85 |       downColor: "#f43f5e",
+  86 |       borderUpColor: "#10b981",
+ GET /dashboard 200 in 68ms (next.js: 3ms, proxy.ts: 5ms, application-code: 61ms)
+ GET /trade 200 in 24ms (next.js: 3ms, proxy.ts: 4ms, application-code: 17ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /api/market/search?q= 200 in 11ms (next.js: 4ms, proxy.ts: 4ms, application-code: 3ms)
+ GET /api/market/search?q= 200 in 5ms (next.js: 1239µs, proxy.ts: 1665µs, application-code: 2ms)
+[browser] Encountered two children with the same key, `NSE_EQ|INE040A01034`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[browser] Encountered two children with the same key, `NSE_EQ|INE040A01034`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+ GET /portfolio 200 in 172ms (next.js: 155ms, proxy.ts: 4ms, application-code: 14ms)
+✓ Compiled in 64ms
+ GET / 200 in 206ms (next.js: 44ms, proxy.ts: 48ms, application-code: 115ms)
+ GET / 200 in 86ms (next.js: 8ms, proxy.ts: 6ms, application-code: 71ms)
+✓ Compiled in 43ms
+✓ Compiled in 70ms
+ GET / 200 in 97ms (next.js: 35ms, proxy.ts: 10ms, application-code: 52ms)
+ GET / 200 in 34ms (next.js: 2ms, proxy.ts: 2ms, application-code: 30ms)
+ GET / 200 in 14ms (next.js: 1968µs, proxy.ts: 3ms, application-code: 8ms)
+✓ Compiled in 50ms
+✓ Compiled in 51ms
+✓ Compiled in 46ms
+✓ Compiled in 81ms
+ GET / 200 in 83ms (next.js: 35ms, proxy.ts: 11ms, application-code: 37ms)
+ GET / 200 in 25ms (next.js: 865µs, proxy.ts: 1265µs, application-code: 23ms)
+ GET / 200 in 17ms (next.js: 1179µs, proxy.ts: 1774µs, application-code: 14ms)
+✓ Compiled in 46ms
+ GET / 200 in 22ms (next.js: 4ms, proxy.ts: 2ms, application-code: 15ms)
+✓ Compiled in 68ms
+ GET / 200 in 132ms (next.js: 7ms, proxy.ts: 8ms, application-code: 117ms)
+✓ Compiled in 42ms
+ GET / 200 in 87ms (next.js: 11ms, proxy.ts: 7ms, application-code: 69ms)
+✓ Compiled in 76ms
+✓ Compiled in 29ms
+✓ Compiled in 26ms
+ GET / 200 in 71ms (next.js: 8ms, proxy.ts: 8ms, application-code: 55ms)
+ GET / 200 in 64ms (next.js: 3ms, proxy.ts: 4ms, application-code: 57ms)
+ GET / 200 in 87ms (next.js: 7ms, proxy.ts: 15ms, application-code: 65ms)
+  Reload env: .env.local
+✓ Compiled in 53ms
+ GET / 200 in 117ms (next.js: 39ms, proxy.ts: 32ms, application-code: 46ms)
+ GET / 200 in 42ms (next.js: 1842µs, proxy.ts: 9ms, application-code: 31ms)
+ GET / 200 in 37ms (next.js: 1370µs, proxy.ts: 3ms, application-code: 33ms)
+ GET / 200 in 25ms (next.js: 1515µs, proxy.ts: 1203µs, application-code: 22ms)
+ GET / 200 in 22ms (next.js: 700µs, proxy.ts: 893µs, application-code: 21ms)
+ GET / 200 in 22ms (next.js: 673µs, proxy.ts: 978µs, application-code: 20ms)
+ GET / 200 in 22ms (next.js: 716µs, proxy.ts: 1011µs, application-code: 20ms)
+ GET / 200 in 22ms (next.js: 668µs, proxy.ts: 868µs, application-code: 20ms)
+ GET / 200 in 15ms (next.js: 696µs, proxy.ts: 963µs, application-code: 14ms)
+ GET / 200 in 8ms (next.js: 655µs, proxy.ts: 880µs, application-code: 6ms)
+  Reload env: .env.local
+✓ Compiled in 31ms
+ GET / 200 in 98ms (next.js: 45ms, proxy.ts: 10ms, application-code: 43ms)
+ GET / 200 in 20ms (next.js: 968µs, proxy.ts: 1442µs, application-code: 18ms)
+ GET / 200 in 22ms (next.js: 723µs, proxy.ts: 1005µs, application-code: 20ms)
+ GET / 200 in 16ms (next.js: 655µs, proxy.ts: 1004µs, application-code: 14ms)
+ GET / 200 in 20ms (next.js: 636µs, proxy.ts: 707µs, application-code: 19ms)
+ GET / 200 in 39ms (next.js: 973µs, proxy.ts: 918µs, application-code: 37ms)
+ GET / 200 in 39ms (next.js: 2ms, proxy.ts: 1852µs, application-code: 35ms)
+ GET / 200 in 34ms (next.js: 1087µs, proxy.ts: 1129µs, application-code: 32ms)
+ GET / 200 in 18ms (next.js: 1698µs, proxy.ts: 1284µs, application-code: 15ms)
+ GET / 200 in 8ms (next.js: 732µs, proxy.ts: 1197µs, application-code: 6ms)
+  Reload env: .env.local
+✓ Compiled in 84ms
+ GET / 200 in 154ms (next.js: 59ms, proxy.ts: 50ms, application-code: 45ms)
+ GET / 200 in 41ms (next.js: 1586µs, proxy.ts: 9ms, application-code: 31ms)
+ GET / 200 in 37ms (next.js: 2ms, proxy.ts: 1284µs, application-code: 33ms)
+ GET / 200 in 19ms (next.js: 1664µs, proxy.ts: 2ms, application-code: 15ms)
+ GET / 200 in 17ms (next.js: 684µs, proxy.ts: 881µs, application-code: 15ms)
+ GET / 200 in 24ms (next.js: 996µs, proxy.ts: 1207µs, application-code: 22ms)
+ GET / 200 in 24ms (next.js: 822µs, proxy.ts: 740µs, application-code: 22ms)
+ GET / 200 in 23ms (next.js: 1014µs, proxy.ts: 968µs, application-code: 21ms)
+ GET / 200 in 15ms (next.js: 648µs, proxy.ts: 1016µs, application-code: 14ms)
+ GET / 200 in 8ms (next.js: 613µs, proxy.ts: 905µs, application-code: 7ms)
+[?25h
